@@ -1,0 +1,21 @@
+# Ignore IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+*.cache
+
+# Build files
+*.css.map
+*.js.map
+
+# PHPUnit
+vendor/
+.phpunit.result.cache
+

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Advanced Country Field module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function advanced_country_field_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.advanced_country_field':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides an advanced country field with additional functionality.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+

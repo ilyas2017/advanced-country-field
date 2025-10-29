@@ -1,0 +1,6 @@
+name: Advanced Country Field
+type: module
+description: 'Provides an advanced country field with additional functionality.'
+core_version_requirement: ^11 || ^10
+package: Fields
+
