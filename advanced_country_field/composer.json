@@ -1,0 +1,36 @@
+{
+    "name": "drupal/advanced_country_field",
+    "description": "Advanced Country Field with flags, filtering, search, multi-language support, and extensive customization.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "keywords": [
+        "country",
+        "flag",
+        "field",
+        "localization",
+        "international",
+        "multilingual"
+    ],
+    "homepage": "https://www.drupal.org/project/advanced_country_field",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/advanced_country_field",
+        "source": "https://git.drupalcode.org/project/advanced_country_field"
+    },
+    "require": {
+        "drupal/core": "^11 || ^10",
+        "php": ">=8.1"
+    },
+    "extra": {
+        "drupal": {
+            "version": "1.0.x-dev",
+            "datestamp": "1734567890",
+            "security-coverage": {
+                "status": "active",
+                "coverage": "excluded"
+            }
+        }
+    }
+}
+

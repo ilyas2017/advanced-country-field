@@ -1,0 +1,7 @@
+default_value_format: 'code'
+language_handling: 'site'
+filter_enabled: false
+enabled_countries: []
+custom_countries: []
+flag_library_path: '/libraries/country-flag-icons/3x2/'
+

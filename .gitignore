@@ -19,3 +19,6 @@
 vendor/
 .phpunit.result.cache
 
+# Documentation (optional - uncomment if you want to exclude it from module repo)
+# documentation/
+

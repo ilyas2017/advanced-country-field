@@ -1,0 +1,18 @@
+advanced_country_field.settings:
+  title: 'Advanced Country Field Settings'
+  description: 'Configure Advanced Country Field settings, country filtering, and flag options.'
+  parent: system.admin_config_regional
+  route_name: advanced_country_field.settings
+
+advanced_country_field.admin_countries:
+  title: 'Configure Countries'
+  description: 'Select which countries should be available in fields.'
+  parent: advanced_country_field.settings
+  route_name: advanced_country_field.admin_countries
+
+advanced_country_field.custom_countries:
+  title: 'Custom Countries'
+  description: 'Add custom countries or regions.'
+  parent: advanced_country_field.settings
+  route_name: advanced_country_field.custom_countries
+

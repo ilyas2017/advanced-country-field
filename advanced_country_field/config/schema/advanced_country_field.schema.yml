@@ -1,0 +1,96 @@
+advanced_country_field.settings:
+  type: config_object
+  label: 'Advanced Country Field settings'
+  mapping:
+    default_value_format:
+      type: string
+      label: 'Default value format'
+    language_handling:
+      type: string
+      label: 'Language handling'
+    filter_enabled:
+      type: boolean
+      label: 'Country filtering enabled'
+    enabled_countries:
+      type: sequence
+      label: 'Enabled country codes'
+      sequence:
+        type: string
+    custom_countries:
+      type: sequence
+      label: 'Custom countries'
+      sequence:
+        type: mapping
+        mapping:
+          code:
+            type: string
+            label: 'Country code'
+          name:
+            type: string
+            label: 'Country name'
+    flag_library_path:
+      type: string
+      label: 'Flag library path'
+
+field.storage_settings.advanced_country_field:
+  type: mapping
+  label: 'Advanced Country Field storage settings'
+  mapping:
+    value_format:
+      type: string
+      label: 'Value format'
+
+field.field_settings.advanced_country_field:
+  type: mapping
+  label: 'Advanced Country Field field settings'
+  mapping: {}
+
+field.widget.settings.advanced_country_field_widget:
+  type: mapping
+  label: 'Advanced Country Field widget settings'
+  mapping:
+    widget_type:
+      type: string
+      label: 'Widget type'
+    show_flags:
+      type: boolean
+      label: 'Show flags'
+    flag_position:
+      type: string
+      label: 'Flag position'
+    enable_search:
+      type: boolean
+      label: 'Enable search'
+    placeholder:
+      type: string
+      label: 'Placeholder text'
+    allow_custom:
+      type: boolean
+      label: 'Allow custom entries'
+    value_format:
+      type: string
+      label: 'Value format'
+
+field.formatter.settings.advanced_country_field_formatter:
+  type: mapping
+  label: 'Advanced Country Field formatter settings'
+  mapping:
+    display_format:
+      type: string
+      label: 'Display format'
+    show_flag:
+      type: boolean
+      label: 'Show flag'
+    flag_position:
+      type: string
+      label: 'Flag position'
+    flag_width:
+      type: string
+      label: 'Flag width (CSS value)'
+    flag_height:
+      type: string
+      label: 'Flag height (CSS value)'
+    link_to_country:
+      type: boolean
+      label: 'Link to country'
+

@@ -1,0 +1,5 @@
+administer advanced country field settings:
+  title: 'Administer Advanced Country Field settings'
+  description: 'Access the Advanced Country Field configuration pages.'
+  restrict access: true
+

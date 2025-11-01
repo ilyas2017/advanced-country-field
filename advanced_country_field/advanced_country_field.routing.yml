@@ -1,0 +1,24 @@
+advanced_country_field.settings:
+  path: '/admin/config/regional/advanced-country-field'
+  defaults:
+    _form: '\Drupal\advanced_country_field\Form\AdvancedCountryFieldSettingsForm'
+    _title: 'Advanced Country Field Settings'
+  requirements:
+    _permission: 'administer advanced country field settings'
+
+advanced_country_field.admin_countries:
+  path: '/admin/config/regional/advanced-country-field/countries'
+  defaults:
+    _form: '\Drupal\advanced_country_field\Form\CountryFilterForm'
+    _title: 'Configure Countries'
+  requirements:
+    _permission: 'administer advanced country field settings'
+
+advanced_country_field.custom_countries:
+  path: '/admin/config/regional/advanced-country-field/custom'
+  defaults:
+    _form: '\Drupal\advanced_country_field\Form\CustomCountryForm'
+    _title: 'Custom Countries'
+  requirements:
+    _permission: 'administer advanced country field settings'
+

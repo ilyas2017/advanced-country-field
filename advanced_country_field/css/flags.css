@@ -1,0 +1,73 @@
+/**
+ * @file
+ * Flag styles for Advanced Country Field.
+ */
+
+.country-flag {
+  display: inline-block;
+  /* Width and height are set via inline styles from formatter settings */
+  /* Do not set width/height here as they should come from formatter configuration */
+  vertical-align: middle;
+}
+
+/* Ensure inline styles take precedence */
+.country-flag[style] {
+  /* Inline styles have higher specificity and will override any CSS rules */
+}
+
+.country-flag[alt] {
+  /* Use alt text for accessibility */
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .country-flag {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Flag display in select options using CSS background images */
+.advanced-country-field-with-flags select.advanced-country-field-widget option {
+  padding-left: 0;
+  padding-right: 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px 15px;
+  padding-left: 26px;
+}
+
+/* Flag position: before (default) */
+.advanced-country-field-with-flags[data-flag-position="before"] select.advanced-country-field-widget option[data-flag-path] {
+  padding-left: 26px;
+  padding-right: 4px;
+  background-position: left center;
+}
+
+/* Flag position: after */
+.advanced-country-field-with-flags[data-flag-position="after"] select.advanced-country-field-widget option[data-flag-path] {
+  padding-left: 4px;
+  padding-right: 26px;
+  background-position: right center;
+}
+
+/* Flag position: only */
+.advanced-country-field-with-flags[data-flag-position="only"] select.advanced-country-field-widget option[data-flag-path] {
+  padding-left: 22px;
+  padding-right: 22px;
+  text-indent: -9999px;
+  background-position: center center;
+}
+
+/* Use background image for each option based on data attribute */
+.advanced-country-field-with-flags select.advanced-country-field-widget option[data-flag-path] {
+  background-image: url('');
+}
+
+/* Note: CSS cannot directly use data attributes for background images.
+   JavaScript will set inline styles for each option instead. */
+
+/* Ensure proper spacing in select elements */
+.advanced-country-field-with-flags select.advanced-country-field-widget {
+  min-height: 2em;
+}
+

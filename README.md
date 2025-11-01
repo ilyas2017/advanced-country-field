@@ -28,6 +28,19 @@ composer require drupal/advanced_country_field
    ```
    Or via the admin interface at `/admin/modules`
 
+## Documentation
+
+Comprehensive documentation is available in the [documentation/](documentation/) directory:
+
+- [Quick Start Guide](documentation/QUICKSTART.md)
+- [Installation Guide](documentation/INSTALLATION.md)
+- [Configuration Guide](documentation/CONFIGURATION.md)
+- [API Reference](documentation/API.md)
+- [Developer Guide](documentation/DEVELOPER.md)
+- [FAQ](documentation/FAQ.md)
+
+See the [Complete Documentation Index](documentation/INDEX.md) for all available documentation.
+
 ## Development
 
 This module is currently under development.

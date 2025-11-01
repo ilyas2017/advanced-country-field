@@ -1,0 +1,242 @@
+/**
+ * @file
+ * Widget styles for Advanced Country Field.
+ */
+
+.advanced-country-field-widget {
+  width: 100%;
+}
+
+/* Search/filter input for dropdowns */
+.advanced-country-field-widget.search-enabled {
+  position: relative;
+}
+
+.advanced-country-field-widget.search-enabled::before {
+  content: "🔍";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Radio buttons and checkboxes with flags */
+.advanced-country-field-widget.form-radios,
+.advanced-country-field-widget.form-checkboxes {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.advanced-country-field-widget.form-radios .form-item,
+.advanced-country-field-widget.form-checkboxes .form-item {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.advanced-country-field-widget.form-radios .form-item:last-child,
+.advanced-country-field-widget.form-checkboxes .form-item:last-child {
+  border-bottom: none;
+}
+
+.advanced-country-field-widget .country-flag {
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .advanced-country-field-widget.form-radios,
+  .advanced-country-field-widget.form-checkboxes {
+    max-height: 200px;
+  }
+}
+
+/* Accessibility improvements */
+.advanced-country-field-widget:focus {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
+
+.advanced-country-field-widget[aria-expanded="true"] {
+  border-color: #005fcc;
+}
+
+/* Custom dropdown with flags */
+.advanced-country-field-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-display {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6px 32px 6px 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  min-height: 38px;
+  box-sizing: border-box;
+  gap: 4px;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-display::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: #666;
+  pointer-events: none;
+  transition: transform 0.2s;
+}
+
+.advanced-country-field-dropdown-wrapper.is-open .advanced-country-field-display::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-display:hover,
+.advanced-country-field-dropdown-wrapper .advanced-country-field-display:focus {
+  border-color: #005fcc;
+  outline: 2px solid rgba(0, 95, 204, 0.2);
+  outline-offset: -2px;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin: 4px 0 0 0;
+  padding: 4px 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-option:hover,
+.advanced-country-field-dropdown-wrapper .advanced-country-field-option:focus {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-option.selected {
+  background-color: #e6f3ff;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-option[aria-selected="true"] {
+  background-color: #005fcc;
+  color: #fff;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-option[aria-selected="true"]:hover,
+.advanced-country-field-dropdown-wrapper .advanced-country-field-option[aria-selected="true"]:focus {
+  background-color: #004aa3;
+}
+
+.advanced-country-field-dropdown-wrapper .advanced-country-field-option img {
+  flex-shrink: 0;
+}
+
+/* Search input in dropdown */
+.advanced-country-field-dropdown-wrapper .advanced-country-field-search {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.advanced-country-field-search-wrapper {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+/* Tags/chips for multi-select display */
+.advanced-country-field-display .advanced-country-field-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e6f3ff;
+  border: 1px solid #005fcc;
+  padding: 4px 8px;
+  margin: 2px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.advanced-country-field-display .advanced-country-field-tag .tag-name {
+  margin: 0 4px;
+}
+
+.advanced-country-field-display .advanced-country-field-tag .tag-remove {
+  background: none;
+  border: none;
+  color: #005fcc;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  margin-left: 4px;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.advanced-country-field-display .advanced-country-field-tag .tag-remove:hover,
+.advanced-country-field-display .advanced-country-field-tag .tag-remove:focus {
+  color: #d00;
+  background-color: rgba(221, 0, 0, 0.1);
+  outline: 1px solid #d00;
+  outline-offset: -1px;
+}
+
+.advanced-country-field-display .advanced-country-field-tag .tag-remove:active {
+  background-color: rgba(221, 0, 0, 0.2);
+}
+
+/* Hide enhanced select element */
+select.advanced-country-field-enhanced {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .advanced-country-field-dropdown-wrapper .advanced-country-field-dropdown-list {
+    max-height: 50vh;
+  }
+  
+  .advanced-country-field-dropdown-wrapper .advanced-country-field-display {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+

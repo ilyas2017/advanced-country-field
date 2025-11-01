@@ -15,10 +15,51 @@ function advanced_country_field_help($route_name, RouteMatchInterface $route_mat
     case 'help.page.advanced_country_field':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Provides an advanced country field with additional functionality.') . '</p>';
+      $output .= '<p>' . t('Provides an advanced country field with flags, filtering, search, and customization options.') . '</p>';
+      $output .= '<h3>' . t('Features') . '</h3>';
+      $output .= '<ul>';
+      $output .= '<li>' . t('Filterable country list') . '</li>';
+      $output .= '<li>' . t('Multiple widget types (dropdown, radio, checkbox, multi-select)') . '</li>';
+      $output .= '<li>' . t('SVG flag support') . '</li>';
+      $output .= '<li>' . t('Search and filtering') . '</li>';
+      $output .= '<li>' . t('Multi-language support') . '</li>';
+      $output .= '<li>' . t('Custom country entries') . '</li>';
+      $output .= '<li>' . t('Full accessibility support') . '</li>';
+      $output .= '</ul>';
       return $output;
 
     default:
   }
 }
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function advanced_country_field_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#field_type'] === 'advanced_country_field') {
+    $suggestions[] = 'field__advanced_country_field';
+    
+    // Add suggestions based on widget type.
+    if (!empty($variables['element']['#widget_type'])) {
+      $suggestions[] = 'field__advanced_country_field__' . $variables['element']['#widget_type'];
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function advanced_country_field_theme($existing, $type, $theme, $path) {
+  return [
+    'advanced_country_field_display' => [
+      'variables' => [
+        'country_code' => NULL,
+        'country_name' => NULL,
+        'show_flag' => FALSE,
+        'flag_position' => 'before',
+        'format' => 'name',
+      ],
+      'template' => 'advanced-country-field-display',
+    ],
+  ];
+}

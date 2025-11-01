@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Installation, update, and uninstall hooks for the Advanced Country Field module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function advanced_country_field_uninstall() {
+  // Clean up module-specific configuration.
+  $config_factory = \Drupal::configFactory();
+  
+  // Delete module configuration.
+  $config_factory->getEditable('advanced_country_field.settings')->delete();
+  
+  // Note: Field instances and data are preserved for safety.
+  // Administrators should manually remove fields before uninstalling if needed.
+  // This prevents accidental data loss.
+  
+  // Clear all caches to remove any references to the uninstalled module.
+  drupal_flush_all_caches();
+}
+

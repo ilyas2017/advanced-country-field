@@ -1,0 +1,10 @@
+services:
+  advanced_country_field.country_data:
+    class: Drupal\advanced_country_field\Service\CountryDataService
+    arguments: ['@language_manager', '@config.factory', '@string_translation', '@module_handler']
+
+  advanced_country_field.config_cache_invalidator:
+    class: Drupal\advanced_country_field\EventSubscriber\ConfigCacheInvalidator
+    tags:
+      - { name: event_subscriber }
+

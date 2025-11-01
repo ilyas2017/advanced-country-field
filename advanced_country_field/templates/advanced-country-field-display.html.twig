@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Template for displaying an advanced country field value.
+ *
+ * Available variables:
+ * - country_code: The ISO 3166-1 alpha-2 country code.
+ * - country_name: The localized country name.
+ * - show_flag: Whether to show the country flag.
+ * - flag_position: Position of flag (before, after, only).
+ * - format: Display format (code, name, both).
+ */
+#}
+{% set classes = [
+  'advanced-country-field-display',
+  'country-' ~ country_code|lower,
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {% if show_flag %}
+    {% set flag_path = '/libraries/country-flags/svg/' ~ country_code|lower ~ '.svg' %}
+    {% if flag_position == 'before' %}
+      <img src="{{ flag_path }}" alt="{{ country_name }}" class="country-flag" /> {{ display_text }}
+    {% elseif flag_position == 'after' %}
+      {{ display_text }} <img src="{{ flag_path }}" alt="{{ country_name }}" class="country-flag" />
+    {% else %}
+      <img src="{{ flag_path }}" alt="{{ country_name }}" class="country-flag" />
+    {% endif %}
+  {% else %}
+    {{ display_text }}
+  {% endif %}
+</div>
+

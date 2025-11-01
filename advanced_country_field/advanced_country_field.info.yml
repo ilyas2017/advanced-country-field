@@ -1,6 +1,7 @@
 name: Advanced Country Field
 type: module
-description: 'Provides an advanced country field with additional functionality.'
+description: 'Provides an advanced country field with flags, filtering, search, multi-language support, and extensive customization options. Supports dropdown, radio, checkbox, and multi-select widgets with SVG flag display, real-time search, and full accessibility.'
 core_version_requirement: ^11 || ^10
 package: Fields
+configure: advanced_country_field.settings
 

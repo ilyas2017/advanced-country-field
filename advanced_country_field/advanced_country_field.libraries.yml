@@ -1,0 +1,37 @@
+widget:
+  css:
+    theme:
+      css/widget.css: {}
+  js:
+    js/widget.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+
+flags:
+  css:
+    theme:
+      css/flags.css: {}
+  dependencies:
+    - core/drupal
+
+formatter:
+  css:
+    theme:
+      css/formatter.css: {}
+  dependencies:
+    - core/drupal
+
+admin:
+  css:
+    theme:
+      css/admin.css: {}
+  js:
+    js/admin.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupal.debounce
+

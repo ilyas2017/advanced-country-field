@@ -1,0 +1,37 @@
+# Ignore IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+*.cache
+
+# Build files
+*.css.map
+*.js.map
+
+# PHPUnit
+vendor/
+.phpunit.result.cache
+
+# Drupal local settings
+settings.local.php
+settings.dev.php
+
+# Build artifacts
+node_modules/
+package-lock.json
+yarn.lock
+
+# Composer lock (for development)
+composer.lock
+
+# Docker
+.env
+docker-compose.override.yml
+
