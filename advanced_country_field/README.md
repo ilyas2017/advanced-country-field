@@ -1,6 +1,5 @@
-# Advanced Country Field
+# Advanced Country Field Drupal Module
 
-[![Build Status](https://github.com/ilyas2017/advanced-country-field/workflows/Tests/badge.svg)](https://github.com/ilyas2017/advanced-country-field/actions)
 [![Latest Stable Version](https://img.shields.io/badge/stable-1.0.0-blue.svg)](https://www.drupal.org/project/advanced_country_field)
 [![License](https://img.shields.io/badge/license-GPL%202.0%2B-blue.svg)](LICENSE.txt)
 
@@ -756,7 +755,6 @@ When uninstalling the module, the `hook_uninstall()` implementation:
 - Unit, Kernel, and Functional test coverage
 
 ## Roadmap
-
 
 - [ ] More flag library options
 - [ ] Additional language packs
